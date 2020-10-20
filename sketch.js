@@ -35,9 +35,7 @@ function setup() {
 }
 
 function draw() {
-  if(bgimg){
-  background(bgimg);
-  }
+background(0);
 
   ground.display();
   stand1.display();
@@ -77,17 +75,17 @@ function mouseReleased() {
 //   }
 // }
 
-async function getTime(){
-  var response= await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
-  var responseJson= await response.json();
-  var time=responseJson.datetime;
-  var hour=time.slice(11,13);
-  if(hour>=06&&hour<=19){
-      bg="bg2.jpg"; 
-  }
-  else{
-      bg="bg1.jpg";
-  }
-  bgimg=loadImage(bg);
-  // console.log(hour);
-}
+// async function getTime(){
+//   var response= await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+//   var responseJson= await response.json();
+//   var time=responseJson.datetime;
+//   var hour=time.slice(11,13);
+//   if(hour>=06&&hour<=19){
+//       bg="bg2.jpg"; 
+//   }
+//   else{
+//       bg="bg1.jpg";
+//   }
+//   bgimg=loadImage(bg);
+//   // console.log(hour);
+// }
